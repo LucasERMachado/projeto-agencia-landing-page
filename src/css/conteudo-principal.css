@@ -1,0 +1,78 @@
+/* PAINEL */
+
+.conteudo-principal .paineis {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+    position: relative;
+}
+
+.conteudo-principal .paineis .imagem-painel {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    filter: brightness(70%);
+
+    /* FAZENDO A PARTE DE EXIBIR AS IMAGENS FICAR OCULTA */
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+
+.conteudo-principal .paineis .projeto1 {
+    background-image: url('../imagens/painel1.jpg');
+}
+
+.conteudo-principal .paineis .projeto2 {
+    background-image: url('../imagens/painel2.jpg');
+}
+
+
+.conteudo-principal .paineis .projeto3 {
+    background-image: url('../imagens/painel3.jpg');
+}
+
+.conteudo-principal .paineis .imagem-painel.mostrar{
+    /* AGORA FAZENDO COM QUE SOMENTE QUEM TENHA A CLASSE MOSTRAR, APAREÇA */
+    opacity: 1;
+}
+
+.conteudo-principal .paineis .titulo {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: calc(1em + 1vw);
+}
+
+.conteudo-principal .paineis .seta {
+    background-image: url('../imagens/seta.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    /* Esconde o texto */
+    text-indent: 100%;
+    overflow: hidden;
+}
+
+
+.conteudo-principal .paineis .seta.btn-voltar {
+    left: 20px;
+    transform: rotateY(180deg);
+}
+
+.conteudo-principal .paineis .seta.btn-avancar {
+    right: 20px;
+}
+
+@media (max-width: 900px){
+    .conteudo-principal .paineis{
+        height: 500px;
+    }
+}
